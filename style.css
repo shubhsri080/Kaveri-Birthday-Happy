@@ -1,0 +1,2090 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+
+    overflow: hidden;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: white;
+
+    background: #090611;
+}
+
+
+/* =========================================
+   MAIN BACKGROUND
+========================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(105, 54, 145, 0.45),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(165, 52, 104, 0.35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #08050f,
+            #160a24,
+            #0b0615
+        );
+
+    z-index: -2;
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 85px 85px;
+
+    opacity: 0.25;
+
+    animation: starsMove 20s linear infinite;
+}
+
+
+@keyframes starsMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-85px);
+    }
+
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 18px;
+
+    color: rgba(255, 180, 215, 0.25);
+
+    animation: floatHeart 12s linear infinite;
+}
+
+
+/* Different positions */
+
+.floating-hearts span:nth-child(1) {
+
+    left: 10%;
+
+    animation-delay: 0s;
+
+}
+
+
+.floating-hearts span:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 3s;
+
+    font-size: 12px;
+
+}
+
+
+.floating-hearts span:nth-child(3) {
+
+    left: 45%;
+
+    animation-delay: 6s;
+
+    font-size: 22px;
+
+}
+
+
+.floating-hearts span:nth-child(4) {
+
+    left: 65%;
+
+    animation-delay: 2s;
+
+    font-size: 14px;
+
+}
+
+
+.floating-hearts span:nth-child(5) {
+
+    left: 80%;
+
+    animation-delay: 5s;
+
+    font-size: 20px;
+
+}
+
+
+.floating-hearts span:nth-child(6) {
+
+    left: 92%;
+
+    animation-delay: 8s;
+
+    font-size: 13px;
+
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 0.7;
+
+    }
+
+    85% {
+
+        opacity: 0.5;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   SLIDE
+========================================= */
+
+.birthday-slide {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.birthday-content {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    text-align: center;
+
+    animation: contentAppear 1.4s ease forwards;
+
+}
+
+
+@keyframes contentAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL INTRO
+========================================= */
+
+.intro-text {
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #d8b7ed;
+
+    animation: fadeIn 1s ease 0.3s both;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+h1 {
+
+    font-size: clamp(
+        48px,
+        7vw,
+        82px
+    );
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    animation: headingAppear 1.2s ease 0.5s both;
+}
+
+
+h1 span {
+
+    color: #f4b8d8;
+
+    font-style: italic;
+
+}
+
+
+@keyframes headingAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.birthday-photo {
+    width: 185px;
+    height: 225px;
+    margin: 20px auto 25px;
+    padding: 7px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.25);
+    overflow: hidden;
+}
+
+.birthday-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 17px;
+    display: block;
+    opacity: 1;
+}
+
+.birthday-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 17px;
+
+    display: block;
+
+}
+
+
+@keyframes photoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.8);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes photoFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-1deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(1deg);
+
+    }
+
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.birthday-subtitle {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #d9d2df;
+
+    margin-bottom: 28px;
+
+    animation: fadeIn 1s ease 1s both;
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.surprise-button {
+
+    position: relative;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    border: 1px solid
+        rgba(255,255,255,0.3);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: fadeIn 1s ease 1.2s both;
+}
+
+
+.surprise-button span {
+
+    display: inline-block;
+
+    margin-left: 8px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.surprise-button:hover {
+
+    transform: translateY(-4px);
+
+    background:
+        rgba(255,255,255,0.16);
+
+    box-shadow:
+
+        0 10px 35px
+        rgba(244,184,216,0.18);
+
+}
+
+
+.surprise-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+#confetti-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 100;
+}
+
+
+.confetti {
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 12px;
+
+    top: -20px;
+
+    animation:
+        confettiFall 2.5s linear forwards;
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .birthday-slide {
+
+        padding: 20px;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .birthday-photo {
+
+        width: 160px;
+
+        height: 200px;
+
+    }
+
+
+    .birthday-subtitle {
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* =========================================
+   SLIDE 2 — OUR STORY
+========================================= */
+
+.story-slide {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 7%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.story-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Small heading */
+
+.story-label {
+    font-size: 0.78rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #e7a7c5;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+/* Main heading */
+
+.story-content h2 {
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    line-height: 1.08;
+    margin: 0 auto 25px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.story-content h2 span {
+    color: #f3a6c7;
+}
+
+/* Intro */
+
+.story-intro {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Main layout */
+
+.story-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+    text-align: left;
+}
+
+/* =========================================
+   PHOTOS
+========================================= */
+
+.story-photos {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-photo {
+    position: absolute;
+    width: 260px;
+    height: 340px;
+    padding: 7px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.story-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 17px;
+}
+
+/* First photo */
+
+.photo-two {
+    transform: rotate(-7deg) translateX(-45px);
+    z-index: 1;
+}
+
+/* Second photo */
+
+.photo-three {
+    transform: rotate(7deg) translateX(45px);
+    z-index: 2;
+}
+
+/* Hover effect */
+
+.story-photos:hover .photo-two {
+    transform: rotate(-10deg) translateX(-65px) translateY(-8px);
+}
+
+.story-photos:hover .photo-three {
+    transform: rotate(10deg) translateX(65px) translateY(8px);
+}
+
+/* =========================================
+   STORY CARDS
+========================================= */
+
+.story-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.story-card {
+    display: flex;
+    gap: 18px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(243, 166, 199, 0.35);
+}
+
+/* Number */
+
+.story-number {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 166, 199, 0.12);
+    border: 1px solid rgba(243, 166, 199, 0.3);
+    color: #f3a6c7;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Card heading */
+
+.story-card h3 {
+    margin: 2px 0 7px;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Card text */
+
+.story-card p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+   ENDING QUOTE
+========================================= */
+
+.story-ending {
+    margin-top: 75px;
+}
+
+.story-ending p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.story-ending span {
+    color: #f3a6c7;
+    font-weight: 600;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .story-slide {
+        padding: 80px 6%;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .story-photos {
+        min-height: 430px;
+    }
+
+    .story-photo {
+        width: 220px;
+        height: 290px;
+    }
+
+    .story-timeline {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .story-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .story-intro {
+        font-size: 0.9rem;
+    }
+
+    .story-photos {
+        min-height: 350px;
+    }
+
+    .story-photo {
+        width: 175px;
+        height: 235px;
+    }
+
+    .photo-two {
+        transform: rotate(-7deg) translateX(-25px);
+    }
+
+    .photo-three {
+        transform: rotate(7deg) translateX(25px);
+    }
+
+    .story-card {
+        padding: 17px;
+    }
+
+    .story-card p {
+        font-size: 0.82rem;
+    }
+
+    .story-ending {
+        margin-top: 55px;
+    }
+}
+
+/* ENABLE PAGE SCROLLING */
+
+html,
+body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* =========================================
+   SLIDE 2 — FINAL POLISH
+========================================= */
+
+/* Make the main heading a little more elegant */
+
+.story-content h2 {
+    font-size: clamp(2.5rem, 4.3vw, 4.1rem);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+/* Give the intro a little breathing room */
+
+.story-intro {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+
+/* Better photo arrangement */
+
+.story-photos {
+    min-height: 500px;
+}
+
+.story-photo {
+    width: 245px;
+    height: 325px;
+}
+
+/* Move photos farther apart */
+
+.photo-two {
+    transform: rotate(-8deg) translateX(-70px);
+    z-index: 1;
+}
+
+.photo-three {
+    transform: rotate(8deg) translateX(70px);
+    z-index: 2;
+}
+
+/* Better hover */
+
+.story-photos:hover .photo-two {
+    transform: rotate(-11deg) translateX(-90px) translateY(-8px);
+}
+
+.story-photos:hover .photo-three {
+    transform: rotate(11deg) translateX(90px) translateY(8px);
+}
+
+/* More premium story cards */
+
+.story-card {
+    padding: 21px 24px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.075),
+        rgba(255,255,255,0.035)
+    );
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* Slightly better card spacing */
+
+.story-timeline {
+    gap: 14px;
+}
+
+/* Make the ending quote stand out */
+
+.story-ending {
+    margin-top: 58px;
+}
+
+.story-ending p {
+    font-size: 1.08rem;
+    letter-spacing: 0.2px;
+}
+
+/* =========================================
+   PHOTO GLOW
+========================================= */
+
+.story-photo::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border-radius: 17px;
+    box-shadow: inset 0 0 25px rgba(255, 170, 210, 0.12);
+    pointer-events: none;
+}
+
+/* =========================================
+   MOBILE ADJUSTMENT
+========================================= */
+
+@media (max-width: 850px) {
+
+    .story-content h2 {
+        font-size: 3rem;
+    }
+
+    .story-photos {
+        min-height: 430px;
+    }
+
+    .story-photo {
+        width: 220px;
+        height: 290px;
+    }
+
+    .photo-two {
+        transform: rotate(-7deg) translateX(-50px);
+    }
+
+    .photo-three {
+        transform: rotate(7deg) translateX(50px);
+    }
+}
+
+/* =========================================
+   SLIDE 3 — I ALWAYS GOT YOUR BACK
+========================================= */
+
+.support-slide {
+    min-height: 100vh;
+    width: 100%;
+    padding: 110px 7%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.support-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Small label */
+
+.support-label {
+    font-size: 0.78rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #e7a7c5;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* Main heading */
+
+.support-content h2 {
+    font-size: clamp(3rem, 5.5vw, 5.2rem);
+    line-height: 1.05;
+    color: #ffffff;
+    margin: 0 0 25px;
+    letter-spacing: -1.5px;
+}
+
+.support-content h2 span {
+    color: #f3a6c7;
+}
+
+/* Intro */
+
+.support-intro {
+    max-width: 700px;
+    margin: 0 auto 65px;
+    color: rgba(255,255,255,0.68);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* =========================================
+   PHOTO COLLAGE
+========================================= */
+
+.support-gallery {
+    width: 100%;
+    max-width: 900px;
+    height: 480px;
+    margin: 0 auto 75px;
+    position: relative;
+}
+
+/* Individual photos */
+
+.support-photo {
+    position: absolute;
+    width: 190px;
+    height: 245px;
+    padding: 6px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.09);
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.35);
+    overflow: hidden;
+    transition: all 0.45s ease;
+}
+
+.support-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* Photo positions */
+
+.support-photo-1 {
+    left: 5%;
+    top: 80px;
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+
+.support-photo-2 {
+    left: 20%;
+    top: 10px;
+    transform: rotate(-4deg);
+    z-index: 4;
+}
+
+.support-photo-3 {
+    left: 36%;
+    top: 55px;
+    transform: rotate(3deg);
+    z-index: 6;
+}
+
+.support-photo-4 {
+    right: 20%;
+    top: 5px;
+    transform: rotate(7deg);
+    z-index: 5;
+}
+
+.support-photo-5 {
+    right: 5%;
+    top: 85px;
+    transform: rotate(11deg);
+    z-index: 3;
+}
+
+.support-photo-6 {
+    left: 44%;
+    top: 205px;
+    transform: rotate(-2deg);
+    z-index: 7;
+}
+
+/* Hover */
+
+.support-gallery:hover .support-photo-1 {
+    transform: rotate(-13deg) translateY(-10px);
+}
+
+.support-gallery:hover .support-photo-2 {
+    transform: rotate(-6deg) translateY(-18px);
+}
+
+.support-gallery:hover .support-photo-3 {
+    transform: rotate(2deg) translateY(-22px);
+}
+
+.support-gallery:hover .support-photo-4 {
+    transform: rotate(9deg) translateY(-18px);
+}
+
+.support-gallery:hover .support-photo-5 {
+    transform: rotate(14deg) translateY(-10px);
+}
+
+.support-gallery:hover .support-photo-6 {
+    transform: rotate(-2deg) translateY(12px);
+}
+
+/* =========================================
+   SUPPORT MESSAGES
+========================================= */
+
+.support-messages {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    text-align: left;
+}
+
+.support-message {
+    display: flex;
+    gap: 18px;
+    padding: 24px;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.075),
+        rgba(255,255,255,0.035)
+    );
+
+    border: 1px solid rgba(255,255,255,0.13);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.support-message:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(243,166,199,0.35);
+}
+
+/* Number */
+
+.support-message > span {
+    min-width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #f3a6c7;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    background: rgba(243,166,199,0.12);
+    border: 1px solid rgba(243,166,199,0.3);
+}
+
+/* Message heading */
+
+.support-message h3 {
+    margin: 2px 0 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Message text */
+
+.support-message p {
+    margin: 0;
+    color: rgba(255,255,255,0.63);
+    font-size: 0.86rem;
+    line-height: 1.65;
+}
+
+/* =========================================
+   ENDING
+========================================= */
+
+.support-ending {
+    margin-top: 75px;
+}
+
+.support-line {
+    width: 90px;
+    height: 1px;
+    margin: 0 auto 28px;
+    background: rgba(243,166,199,0.5);
+}
+
+.support-ending p {
+    margin: 0 0 10px;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.support-ending span {
+    color: #f3a6c7;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .support-slide {
+        padding: 85px 6%;
+    }
+
+    .support-gallery {
+        height: 420px;
+        max-width: 650px;
+    }
+
+    .support-photo {
+        width: 150px;
+        height: 200px;
+    }
+
+    .support-photo-1 {
+        left: 3%;
+    }
+
+    .support-photo-2 {
+        left: 18%;
+    }
+
+    .support-photo-3 {
+        left: 34%;
+    }
+
+    .support-photo-4 {
+        right: 18%;
+    }
+
+    .support-photo-5 {
+        right: 3%;
+    }
+
+    .support-photo-6 {
+        left: 42%;
+        top: 175px;
+    }
+
+    .support-messages {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .support-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .support-intro {
+        font-size: 0.9rem;
+    }
+
+    .support-gallery {
+        height: 350px;
+    }
+
+    .support-photo {
+        width: 105px;
+        height: 145px;
+        padding: 4px;
+    }
+
+    .support-photo img {
+        border-radius: 10px;
+    }
+
+    .support-photo-1 {
+        left: 0;
+        top: 75px;
+    }
+
+    .support-photo-2 {
+        left: 14%;
+        top: 15px;
+    }
+
+    .support-photo-3 {
+        left: 31%;
+        top: 55px;
+    }
+
+    .support-photo-4 {
+        right: 14%;
+        top: 15px;
+    }
+
+    .support-photo-5 {
+        right: 0;
+        top: 75px;
+    }
+
+    .support-photo-6 {
+        left: 40%;
+        top: 170px;
+    }
+
+    .support-message {
+        padding: 18px;
+    }
+
+    .support-ending {
+        margin-top: 55px;
+    }
+}
+
+/* =========================================
+   FINAL SLIDE — CINEMATIC MEMORY LAYOUT
+========================================= */
+
+.final-slide {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 7%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.final-content {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    min-height: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================
+   CENTER MESSAGE
+========================================= */
+
+.final-center-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(620px, 65%);
+    margin: 0 auto;
+
+    text-align: center;
+    padding-top: 45px;
+}
+
+.final-label {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #e7a7c5;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.final-center-content h2 {
+    margin: 0 0 22px;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+.final-center-content h2 span {
+    color: #f3a6c7;
+}
+
+
+/* =========================================
+   FRIENDSHIP DURATION
+========================================= */
+
+.friendship-duration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 45px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.duration-dot {
+    color: #f3a6c7;
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.final-message {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.final-message p {
+    margin: 0 0 24px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.final-message strong {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TOP LEFT PHOTO PAIR
+========================================= */
+
+.memory-pair {
+    position: absolute;
+    z-index: 3;
+
+    width: 185px;
+    height: 245px;
+}
+
+.top-left-pair {
+    top: 40px;
+    left: 10px;
+}
+
+
+/* =========================================
+   BOTTOM RIGHT PHOTO PAIR
+========================================= */
+
+.bottom-right-pair {
+    right: 5px;
+    top: 690px;
+
+    width: 185px;
+    height: 245px;
+}
+
+
+/* =========================================
+   INDIVIDUAL PHOTO FRAMES
+========================================= */
+
+.final-memory-photo {
+    position: absolute;
+
+    width: 165px;
+    height: 225px;
+
+    padding: 7px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.09);
+
+    border: 1px solid rgba(255,255,255,0.28);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.35);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.final-memory-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 13px;
+}
+
+
+/* =========================================
+   TOP LEFT — PHOTO 10
+========================================= */
+
+.final-photo-10 {
+    top: 0;
+    left: 0;
+
+    transform: rotate(-8deg);
+}
+
+
+/* TOP LEFT — PHOTO 11 */
+
+.final-photo-11 {
+    top: 35px;
+    left: 45px;
+
+    transform: rotate(6deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   BOTTOM RIGHT — PHOTO 12
+========================================= */
+
+.final-photo-12 {
+    top: 0;
+    left: 0;
+
+    transform: rotate(7deg);
+}
+
+
+/* BOTTOM RIGHT — PHOTO 13 */
+
+.final-photo-13 {
+    top: 35px;
+    left: 45px;
+
+    transform: rotate(-6deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   PHOTO HOVER
+========================================= */
+
+.final-memory-photo:hover {
+    transform: rotate(0deg) scale(1.06) !important;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.45);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   FUNNY BREAK
+========================================= */
+
+.funny-break {
+    margin: 55px auto;
+
+    max-width: 560px;
+
+    padding: 23px 28px;
+
+    border-radius: 20px;
+
+    background: rgba(243,166,199,0.07);
+
+    border: 1px solid rgba(243,166,199,0.18);
+}
+
+.funny-break p {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.funny-break span {
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================
+   NICKNAME REVEAL
+========================================= */
+
+.nickname-reveal {
+    margin-top: 55px;
+
+    padding: 45px 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nickname-intro {
+    margin: 0 0 18px;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 0.9rem;
+}
+
+.nickname-question {
+    margin: 0 0 8px;
+
+    color: rgba(255,255,255,0.42);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+}
+
+.nickname-reveal h3 {
+    margin: 10px 0 15px;
+
+    color: #f3a6c7;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 30px rgba(243,166,199,0.25);
+}
+
+.nickname-note {
+    margin: 0;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FINAL HORIZONTAL PHOTO
+========================================= */
+
+.final-horizontal-memory {
+    position: relative;
+
+    z-index: 4;
+
+    width: min(650px, 70%);
+
+    margin: 75px auto 0;
+}
+
+.horizontal-memory-frame {
+    width: 100%;
+    height: 245px;
+
+    padding: 8px;
+
+    box-sizing: border-box;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.4);
+
+    transform: rotate(-1deg);
+
+    overflow: hidden;
+
+    transition: transform 0.4s ease;
+}
+
+.horizontal-memory-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 16px;
+}
+
+.horizontal-memory-frame:hover {
+    transform: rotate(0deg) scale(1.025);
+}
+
+
+/* =========================================
+   FINAL WISH
+========================================= */
+
+.final-wish {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    margin-top: 55px;
+}
+
+.final-line {
+    width: 80px;
+    height: 1px;
+
+    margin: 0 auto 25px;
+
+    background: rgba(243,166,199,0.5);
+}
+
+.final-wish h4 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 1.25rem;
+}
+
+.final-wish p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 0.85rem;
+
+    font-style: italic;
+}
+
+.heart {
+    margin-top: 24px;
+
+    color: #f3a6c7;
+
+    font-size: 1.4rem;
+
+    animation: finalHeartPulse 2s ease-in-out infinite;
+}
+
+@keyframes finalHeartPulse {
+
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.18);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .final-slide {
+        padding: 80px 5%;
+    }
+
+    .final-content {
+        min-height: auto;
+    }
+
+    .final-center-content {
+        width: 100%;
+        padding-top: 300px;
+    }
+
+    .top-left-pair {
+        top: 0;
+        left: 0;
+        transform: scale(0.75);
+        transform-origin: top left;
+    }
+
+    .bottom-right-pair {
+        top: 700px;
+        right: 0;
+        transform: scale(0.75);
+        transform-origin: top right;
+    }
+
+    .final-horizontal-memory {
+        width: 100%;
+    }
+
+    .horizontal-memory-frame {
+        height: 190px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .final-center-content {
+        padding-top: 270px;
+    }
+
+    .final-center-content h2 {
+        font-size: 2.7rem;
+    }
+
+    .final-message p {
+        font-size: 0.88rem;
+    }
+
+    .top-left-pair {
+        transform: scale(0.58);
+    }
+
+    .bottom-right-pair {
+        top: 650px;
+        transform: scale(0.58);
+    }
+
+    .horizontal-memory-frame {
+        height: 160px;
+    }
+}
+
+/* =========================================
+   FINAL HORIZONTAL PHOTO — SHOW FULL IMAGE
+   ========================================= */
+
+.final-horizontal-memory {
+    width: min(700px, 80%) !important;
+    height: auto !important;
+    max-height: none !important;
+    margin: 70px auto 25px !important;
+    box-sizing: border-box;
+    overflow: visible !important;
+}
+
+.final-horizontal-memory .horizontal-memory-frame {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 8px !important;
+    box-sizing: border-box;
+    overflow: visible !important;
+    border-radius: 22px;
+}
+
+.final-horizontal-memory .horizontal-memory-frame img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 16px;
+} 
+
+/* =========================================
+   STAR BURST EFFECT
+   ========================================= */
+
+#star-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+    animation: starAppear 1.5s ease-out forwards;
+}
+
+.star.small {
+    width: 2px;
+    height: 2px;
+}
+
+.star.large {
+    width: 6px;
+    height: 6px;
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 1),
+        0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes starAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+
+    55% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+}
+
+
+/* Shooting stars */
+
+.shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        white
+    );
+    transform: rotate(-35deg);
+    opacity: 0;
+    animation: shootingStar 1s ease-out forwards;
+}
+
+@keyframes shootingStar {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(-35deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-250px, 250px) rotate(-35deg);
+    }
+}
